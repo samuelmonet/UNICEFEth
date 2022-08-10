@@ -1,0 +1,212 @@
+type;name;label:English(en);required;appearance;hint;relevant
+start;start;;;;;
+end;end;;;;;
+today;today;;;;;
+deviceid;deviceid;;;;;
+phonenumber;phonenumber;;;;;
+audit;audit;;;;;
+select_one testvalid;testvalid;Are you conducting a Test or a Valid entry?;1;horizontal;"A test entry is simply a pilot entry to preview/pretest survey; to familiarize oneself with the questionnaire before the actual data collection. A test entry is not counted";
+note;notetimme;Kindly check that that your device DATE&TIME is ACCURATE before you proceed!;;;;
+date;date1;Survey Start Date;1;;;
+time;time1;Survey Start Time;1;;;
+calculate;time_1R;;;;;
+begin_group;consent;Respondent Consent;;field-list;;
+note;Your_participation_i_ther_on_your_opinion;Your participation is entirely voluntary, and even if you agree to take part, you are still free to withdraw before, during or after the interview. In addition, should you not wish to answer any particular question or questions, you are free to decline. All answers are strictly confidential and you will remain anonymous. With your agreement, we may audio record the interview and quote some of what you say in our report, but we will do so in a way that ensures that it cannot be ascribed to you. Your name will not be linked with the research findings and will not be identifiable in the report that results from the research except in an Annex at the end of the final report that lists all the informants who have contributed to the mid-term evaluation. Axiom ME will keep your information and will integrate you in others database of respondents which can be contacts during our verification (quality assurance) or for others surveys, until you express otherwise by contacting our team by phone or by email. It should be noted that AXIOM ME will not share your information beyond AXIOM ME but some of our team members can contact you to verify the occurrence of interview and our researchers could recontact you to build further on your opinion.;;;;
+select_one Consent;Consent;I agree to take part in this interview.;1;horizontal;;
+select_one Consent;Consent1;I appreciate the objectives of the research and how my information and opinion will be used.;1;horizontal;;${Consent} = '1' 
+select_one Consent;Consent2;I know how to contact Axiom ME to limit or cancel my information.;1;horizontal;;${Consent} = '1' 
+select_one Consent;Consent3;I understand that my personal information used for QA purpose only will not be shared with any party out of Axiom ME.;1;horizontal;;${Consent} = '1' 
+select_one Consent;Consent4;I agree that you may contact me in the future to gather feedback on this research.;1;horizontal;;${Consent} = '1' 
+select_one Consent;Consent5;I agree to having my words used as quotes in the final report, and I understand that my words will be anonymized so that it will not be possible to ascribe any of my comments to me.;1;horizontal;;${Consent} = '1' 
+select_one Consent;Consent6;I am of the same mind to having my name and institution included in an annex at the end of the final report that lists the informants who have contributed to this evaluation.;1;horizontal;;${Consent} = '1' 
+end_group;;;;;;
+begin_group;enumeratordetails;Enumerator Section;;field-list;;
+text;enumname;Enumerator's name;1;;"Enter your name and surname each starting with a capital letter eg; Mohamed Mohamud";
+select_one gender;enumgender;Enumerator's gender;1;horizontal;;
+select_one region_et;region;Region;1;w1;;
+select_one zone_et;zone;Zone ;1;w1;;
+select_one woreda_et;woreda;Woreda;1;w1;;
+text;enterkeble;Enter kebele:;1;w1;;
+geopoint;gps;GPS;1;w4;Location;
+end_group;;;;;;
+begin_group;respondent;Respondent's Section;;;;${Consent} = '1' 
+text;name;A1) Respondent's name?;1;;Enter respondent's 3 names each starting with a capital letter e.g Mohamed Ahmed Salad;
+text;resp_phone;A3) Respondent's phone number?;1;numbers;Enter respondent's phone number:;
+select_one gender;genderrespondent;A4) Sex of the respondent?;1;horizontal;;
+integer;agerespondent;A5) Age of  the respondent?;1;horizontal;;
+text;clan;A6) Clan of respondent?;1;w1;;
+text;subclan;A7) Sub-clan of respondent?;1;w1;;
+select_one marital_status;marriage;A8) Marital status of the respondent:;1;horizontal;;
+begin_group;hh_comp;Household Size;;field-list;;
+note;hh_ppl;A9)How many people are living in your household?;;;;
+integer;hh_ppl1;Adult Males 18 years and above;1;w2;;
+integer;hh_ppl2;Adult females 18 years and above;1;w2;;
+integer;hh_ppl3;Children boys between 5- 18yrs;1;w2;;
+integer;hh_ppl4;Children girls between 5- 18yrs;1;w2;;
+integer;hh_ppl5;Children boys below 5yrs;1;w2;;
+integer;hh_ppl6;Children girls below 5yrs;1;w2;;
+end_group;;;;;;
+select_one yesno;hh_head;A10) Are you the head of household;1;w4;;
+select_one rltptohhhead;hh_head_rlnshp;"A11) If no; what is the relationship  between you  and the HH head;";1;w3;"NB: enumerator kindly select the right response; for example, a male respondent cannot say he is sister to household head etc";${hh_head} = '2' 
+select_one gender;genderhhhead;A12) Gender of the household head:;1;w1;;${hh_head} = '2' 
+select_one educ;educ;A13) Respondent’s highest level of education;1;w2;;
+select_one residency;disp_status;A14) What is your household’s displacement status?;1;w2;;
+integer;how_long1;A15) How long have you stayed in your current settlement? YEARS;1;w2;(enter number if years, if less than 1 year enter 0);
+integer;how_long2;A16) How long have you stayed in your current settlement? MONTHS;1;w2;"(For example, 1 year 2 months, 3yrs 0 months etc.)
+NB: enter between 0-12 becase year has been captured above";
+integer;school_attended;A17) How many of your children(5-18yrs) attend school?;1;w4;NB: this is for those HH with children 5-18 years;(${hh_ppl3} > 0) or (${hh_ppl4} > 0)
+select_one yesno;disabled;A18) Are you disabled?;1;w2;;
+text;specify_disabled;A19) If yes specify disability;1;w2;;${disabled} = '1' 
+select_one yesno;disabled_other;A20) Apart from you, is there anyone who is disabled in your household?;1;w2;;
+text;disabled_otherspecify;A21) If yes specify disability;1;w2;;${disabled_other} = '1' 
+end_group;;;;;;
+begin_group;livelihood;Livelihood Activities;;;;${Consent} = '1' 
+begin_group;food_source;sources of your household’s food/income;;field-list;;
+select_multiple foodsource;foodsource;B1)What were all the sources of your household’s food/income over the last 12 months?;1;w3;Read each source and must select atleast 3 sources of income;
+text;source19_other;Specify other source;1;w1;if other please specify;selected(${foodsource},'98')
+end_group;;;;;;
+select_one foodsource;foodsource_rank1;B2) Rank the TOP most Source of  food/income based on the proportion they provide for your household;1;w4;based on the selected sources above , rank the top-most ;
+select_one foodsource;foodsource_rank2;B3) Rank the SECOND highest Source of food/income based on the proportion they provide for your household;1;w4;based on the selected sources above , rank the SECOND top-most ;
+select_one foodsource;foodsource_rank3;B4) Rank the Third highest Source of food/income based on the proportion they provide for your household;1;w4;based on the selected sources above , rank the THIRD top-most ;
+integer;averageincome;"B5) Over the last 12 months;What is your household’s average income per month in USD?
+";1;w2;"If given in any other currency; convert to USD";
+select_one yesno;sufficientincome;B6) Is your income sufficient to meet your household’s needs?;1;w2;;
+end_group;;;;;;
+begin_group;scbs;Social and Capacity Building Support;;;;${Consent} = '1' 
+begin_group;social_support_sources;FORMAL SOURCES OF SOCIAL SUPPORT;;field-list;;
+select_one yndr;support;C1)Has your household received any kind of formal support from the government or NGO over the past 12 months?;1;w4;;
+select_multiple support;support2;C2) What types of support were received?;1;w3;"Read list; select all that apply";${support}='1'
+text;support_other;Specify other support received;1;w1;if other please specify;selected(${support2},'98')
+end_group;;;;;;
+begin_group;social_capital;SOCIAL CAPITAL;;field-list;;
+select_multiple help;helpsource;D1) If your household had a problem and needed help urgently (e.g., food, money, labor, transport, etc.), who IN THIS VILLAGE could you turn to for help?;1;w3;"Read list; select all that apply";
+text;helpsource_other;Specify other person IN THIS VILLAGE you could turn to for help;1;w1;if other please specify;selected(${helpsource},'98')
+select_multiple help;helpsource2;D2) If your household had a problem and needed help urgently (e.g., food, money, labor, transport, etc.), who OUTSIDE THIS VILLAGE could you turn to for help?;1;w3;"Read list; select all that apply";
+text;helpsource2_other;Specify other person OUTSIDE THIS VILLAGE  you could turn to for help;1;w1;if other please specify;selected(${helpsource2},'98')
+select_one rate;ability;D3) Compared to one year ago has your ability to get help from anyone within or outside of your village:;1;w4;;
+select_multiple help;helpoffer;D4) Who INSIDE THIS VILLAGE would you help if they needed help urgently (e.g., food, money, labor, transport, etc.)?;1;w3;"Read list; select all that apply";
+text;helpoffer_other;Specify other person IN THIS VILLAGE you could help;1;w1;if other please specify;selected(${helpoffer},'98')
+select_multiple help;helpoffer2;D5) Who OUTSIDE THIS VILLAGE would you help if they needed help urgently (e.g., food, money, labor, transport, etc.)?;1;w3;"Read list; select all that apply";
+text;helpoffer2_other;Specify other person OUTSIDE THIS VILLAGE  you could help;1;w1;if other please specify;selected(${helpoffer2},'98')
+end_group;;;;;;
+begin_group;linking_social_capital;LINKING SOCIAL CAPITAL;;field-list;;
+select_one yndr;govofficial;E1) Do you or does anyone else in your household personally know an elected government official?;1;w4;;
+select_multiple know;know;E2) How do you (or other household member) know the government official? Is he or she a….?;1;w3;"Read list; select all that apply";${govofficial}='1'
+text;know_other;Specify how else you know the government official;1;w1;if other please specify;(${govofficial}='1') and (selected(${know},'98'))
+select_one yesno;govofficial_help;E3) Could you ask the official to help your family or village if help was needed?;1;w4;;${govofficial}='1'
+select_one yndr;ngostaff;E4) Do you or does anyone else in your household personally know a staff member of an NGO?;1;w4;;
+select_multiple know;know2;E5) How do you (or another household member) know the NGO staff member? Is he or she a…?;1;w3;"Read list; select all that apply";${ngostaff}='1'
+text;know2_other;Specify how else you know the the NGO staff member;1;w1;if other please specify;(${ngostaff}='1' )and (selected(${know2},'98'))
+select_one yesno;ngostaff_help;E6) Could you ask the NGO staff member to help your family or community if help was needed?;1;w4;;${ngostaff}='1'
+end_group;;;;;;
+end_group;;;;;;
+begin_group;aca;Aspirations and Confidence to Adapt;;;;${Consent} = '1' 
+select_one agree;aca1;F1) Your household can bounce back from any challenge that life throws at it;1;w2;;
+select_one agree;aca2;F2) During times of hardship, your household can change its primary income or source of livelihood if needed;1;w2;;
+select_one statements;aca3;F3) Please tell me which one of these two views you most agree with.;1;w2;;
+select_one statements2;aca4;F4) Please tell me which one of these two views you most agree with.;1;w2;;
+select_one yesno;aca5;F5) Are you hopeful about your children’s future?;1;w2;For households with children less than 18yrs;(${hh_ppl3} > 0) or (${hh_ppl4} > 0) or (${hh_ppl5} > 0) or (${hh_ppl6} > 0)
+select_one childeduc;aca6;F6) What level of education do you want for your children?;1;w2;For households with children less than 18yrs;(${hh_ppl3} > 0) or (${hh_ppl4} > 0) or (${hh_ppl5} > 0) or (${hh_ppl6} > 0)
+select_one yesno;aca7;F7) Do you agree that one should always follow the advice of the elders?;1;w4;;
+select_one yesno;aca8;F8) Do you communicate regularly with at least one person outside the village?;1;w4;;
+select_one yesno;aca9;F9) During the past week, have you engaged in any economic activities with other villages or clans? For example, farming, trading, employment, borrowing or lending money.;1;w4;;
+integer;aca10;F10) How many times in the past month have you gotten together with friends, family, neighbors, etc. to discuss issues or share food/drinks, either in someone’s home or in a public place?;1;w2;Number of times;
+integer;aca11;F11) How many days in the past month have you attended a church/mosque or other religious service?;1;w2;Number of days;
+end_group;;;;;;
+begin_group;fs;Food Insecurity Coping Strategies;;;;${Consent} = '1' 
+begin_group;householdhunger;Household Hunger Scale Module(HHS indicator);;field-list;;
+select_one yesno;hh1;"G1) In the past [4 weeks/30 days], was there ever no food to eat of any kind in your house because of lack of resources to get food?
+  ";1;w1;;
+select_one happen_often;hh2;G2) How often did this happen in the past [4 weeks/30 days]?;1;w3;;${hh1} = '1' 
+select_one yesno;hh3;"G3) In the past [4 weeks/30 days], did you or any household member go to sleep at night hungry because there was not enough food?
+";1;w1;;
+select_one happen_often;hh4;G4) How often did this happen in the past [4 weeks/30 days]?;1;w3;;${hh3} = '1' 
+select_one yesno;hh5;G5) In the past [4 weeks/30 days], did you or any household member go a whole day and night without eating anything at all because there was not enough food?;1;w1;;
+select_one happen_often;hh6;G6) How often did this happen in the past [4 weeks/30 days]?;1;w3;;${hh5} = '1' 
+end_group;;;;;;
+begin_group;rcsi;rCSI indicator;;field-list;;
+note;fs_att;H) Over the past 7 days, how many days has your household had to:;;;Read list;
+integer;fs_att1;a) Rely on less preferred and less expensive foods?;1;w2;Number of days;
+integer;fs_att2;b) Borrow food, or rely on help from a friend or relative?;1;w2;Number of days;
+integer;fs_att3;c) Purchase food on credit?;1;w2;Number of days;
+integer;fs_att4;d) Gather wild food, hunt, or harvest immature crops?;1;w2;Number of days;
+integer;fs_att5;e) Consume seed stock held for next season?;1;w2;Number of days;
+integer;fs_att6;f) Send household members to eat elsewhere?;1;w2;Number of days;
+integer;fs_att7;g) Send household members to beg?;1;w2;Number of days;
+integer;fs_att8;h) Limit portion size at mealtimes?;1;w2;Number of days;
+integer;fs_att9;i) Restrict consumption by adults in order for small children to eat?;1;w2;Number of days;
+integer;fs_att10;j) Feed working members of HH at the expense of non-working members?;1;w2;Number of days;
+integer;fs_att11;k) Reduce number of meals eaten in a day?;1;w2;Number of days;
+integer;fs_att12;l) Skip entire days without eating?;1;w2;Number of days;
+end_group;;;;;;
+begin_group;HDD;Household Dietary Diversity Indicator for Measurement of Household Food Access;;field-list;;
+note;HDD_note;I) Now I would like to ask you about the types of foods that you or anyone else in your household ate yesterday during the day and at night;;;Read list;
+select_one yesno;hhd1;"a) Any [INSERT ANY LOCAL FOODS, E.G. UGALI, NSHIMA], bread,rice noodles, biscuits, or any other foods made from millet,sorghum, maize, rice, wheat, or [INSERT ANY OTHER LOCALLY AVAILABLE GRAIN]?
+";1;w2;;
+select_one yesno;hhd2;b) Any potatoes, yams, manioc, cassava or any other foods made from roots or tubers?;1;w2;;
+select_one yesno;hhd3;c) Any vegetables?;1;w2;;
+select_one yesno;hhd4;d) Any fruits?;1;w2;;
+select_one yesno;hhd5;"e) Any beef, pork, lamb, goat, rabbit wild game, chicken, duck, or other birds, liver, kidney, heart, or other organ meats?
+";1;w2;;
+select_one yesno;hhd6;f)  Any eggs?;1;w2;;
+select_one yesno;hhd7;g) Any fresh or dried fish or shellfish?;1;w2;;
+select_one yesno;hhd8;h) Any foods made from beans, peas, lentils, or nuts?;1;w2;;
+select_one yesno;hhd9;i)  Any cheese, yogurt, milk or other milk products?;1;w2;;
+select_one yesno;hhd10;j)  Any foods made with oil, fat, or butter?;1;w2;;
+select_one yesno;hhd11;k) Any sugar or honey?;1;w2;;
+select_one yesno;hhd12;h) Any other foods, such as condiments, coffee, tea?;1;w2;;
+end_group;;;;;;
+begin_group;fcs;Food Consumption Score for Measurement of Household Food Access;;field-list;;
+note;fcs_note;"J) How many days over the last 7 days, did members of your household eat the following food items, prepared and/or consumed at home?
+";;;Read list;
+integer;fcs1;a) Maize, maize porridge, rice, sorghum, millet pasta, bread and other cereals;1;w2;Number of days;
+integer;fcs2;b) Cassava, potatoes and sweet potatoes, other tubers, plantains;1;w2;Number of days;
+integer;fcs3;c) Beans, Peas, groundnuts and cashew nuts;1;w2;Number of days;
+integer;fcs4;d) Vegetables, leaves;1;w2;Number of days;
+integer;fcs5;e) Fruits;1;w2;Number of days;
+integer;fcs6;f)  Beef, goat, poultry, pork, eggs and fish;1;w2;Number of days;
+integer;fcs7;g) Milk yogurt and other diary;1;w2;Number of days;
+integer;fcs8;h) Sugar and sugar products, honey;1;w2;Number of days;
+integer;fcs9;i)  Oils, fats and butter;1;w2;Number of days;
+integer;fcs10;j)  Spices, tea, coffee, salt, fish power, small amounts of milk for tea.;1;w2;Number of days;
+end_group;;;;;;
+begin_group;coping_strategies;Coping Strategies;;;;
+begin_group;cp;Crop production;;field-list;;
+select_one yn2;cs1;Ka.1) Did you yourself participate in decisions about Crop production in the last 12 months?;1;w4;;
+select_one input;cs1.2;Ka.2) How much input do you have in the decision for Crop production?;1;w2;;${cs1}='1'
+select_one input;cs1.3;Ka.3) How much input did you have in decisions on the use of income generated from Crop production?;1;w2;;${cs1}='1'
+end_group;;;;;;
+begin_group;lr;Livestock rearing;;field-list;;
+select_one yn2;cs2;Kb.1) Did you yourself participate in decisions about Livestock rearing in the last 12 months?;1;w4;;
+select_one input;cs2.2;Kb.2) How much input do you have in the decision for Livestock rearing?;1;w2;;${cs2}='1'
+select_one input;cs2.3;Kb.3) How much input did you have in decisions on the use of income generated from Livestock rearing?;1;w2;;${cs2}='1'
+end_group;;;;;;
+begin_group;he;Major household expenditures;;field-list;;
+select_one yn2;cs3;Kc.1) Did you yourself participate in decisions about Major household expenditures (large appliances, etc.) in the last 12 months?;1;w2;;
+select_one input;cs3.2;Kc.2) How much input do you have in the decision for Major household expenditures (large appliances, etc.)?;1;w2;;${cs3}='1'
+end_group;;;;;;
+begin_group;em;Spending money that you have earned ;;field-list;;
+select_one yn2;cs4;Kd.1) Did you yourself participate in decisions about Spending money that you have earned in the last 12 months?;1;w2;;
+select_one input;cs4.2;Kd.2) How much input do you have in the decision for Spending money that you have earned?;1;w2;;${cs4}='1'
+end_group;;;;;;
+begin_group;em2;Spending money that your spouse has earned;;field-list;;
+select_one yn2;cs5;Ke.1) Did you yourself participate in decisions about Spending money that your spouse has earned in the last 12 months?;1;w2;;
+select_one input;cs5.2;Ke.2) How much input do you have in the decision for Spending money that your spouse has earned?;1;w2;;${cs5}='1'
+end_group;;;;;;
+begin_group;ce;Children’s education;;field-list;;
+select_one yn2;cs6;Kf.1) Did you yourself participate in decisions about Children’s education in the last 12 months?;1;w2;;
+select_one input;cs6.2;Kf.2) How much input do you have in the decision for Children’s education?;1;w2;;${cs6}='1'
+end_group;;;;;;
+begin_group;mt;Seeking medical treatment;;field-list;;
+select_one yn2;cs7;Kg.1) Did you yourself participate in decisions about Seeking medical treatment for your children in the last 12 months?;1;w2;;
+select_one input;cs7.2;Kg.2) How much input do you have in the decision for Seeking medical treatment for your children?;1;w2;;${cs7}='1'
+end_group;;;;;;
+begin_group;fp;use family planning (including contraception) to space or limit births;;field-list;;
+select_one yn2;cs8;Kh.1) Did you yourself participate in decisions about Whether or not to use family planning (including contraception) to space or limit births in the last 12 months?;1;w2;;
+select_one input;cs8.2;Kh.2) How much input do you have in the decision for Whether or not to use family planning (including contraception) to space or limit births?;1;w2;;${cs8}='1'
+end_group;;;;;;
+end_group;;;;;;
+end_group;;;;;;
+time;time2;Survey  End Time;1;w2;;
+date;date2;Survey End Date;1;w2;;
+note;thanksnote;"Thank you for participating in this survey; Your feedback is highly appreciated";;;;

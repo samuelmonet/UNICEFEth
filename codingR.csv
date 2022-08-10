@@ -1,0 +1,207 @@
+list name;name;label:English(en);region;zone;code;color
+Consent;1;Yes;;;;
+Consent;2;No;;;;
+emailconsent;1;Yes;;;;
+emailconsent;2;No;;;;
+yesno;1;Yes;;;;
+yesno;2;No;;;;
+testvalid;1;Valid;;;;
+testvalid;2;Test;;;;
+gender;1;Male;;;1;blue
+gender;2;Female;;;0;pink
+gender.resp;1;Male;;;1;blue
+gender.resp;2;Female;;;0;pink
+gender.HHH;1;Male;;;1;blue
+gender.HHH;2;Female;;;0;pink
+rltptohhhead;1;I am Sister to HH-head;;;;
+rltptohhhead;2;I am Brother to HH-head;;;;
+rltptohhhead;3;I am Husband to HH-head;;;;
+rltptohhhead;4;I am Wife to HH-head;;;;
+rltptohhhead;5;I am Co-wife to HH-head;;;;
+rltptohhhead;6;I am Son to HH-head;;;;
+rltptohhhead;7;I am daughter to HH-head;;;;
+rltptohhhead;8;I am other relative to HH-head;;;;
+rltptohhhead;9;I am other non-relative to HH-head;;;;
+rltptohhhead;10;I am servant (live-in) to HH-head;;;;
+rltptohhhead;11;I am father to HH-head;;;;
+rltptohhhead;12;I am mother to HH-head;;;;
+rltptohhhead;13;I am foster child to HH-head;;;;
+educ;1;Quranic;;;1;magenta
+educ;2;Some primary;;;1;darkred
+educ;3;Completed primary;;;2;red
+educ;4;Some secondary;;;3;orange
+educ;5;Completed secondary;;;4;yellow
+educ;6;Some university;;;5;lightgreen
+educ;7;Completed university;;;6;green
+educ;8;Graduate degree;;;7;darkgreen
+educ;9;No education;;;0;black
+educ;10;Vocational Training;;;4;grey
+disp_status;1;IDP;;;0;yellow
+disp_status;2;Returnee (IDP);;;1;blue
+disp_status;3;Returnee (Refugee);;;1;purple
+disp_status;4;Host Community;;;2;green
+schooltype;1;Formal;;;;
+schooltype;2;Madrassa;;;;
+employment;1;Employed;;;;
+employment;2;Unemployed;;;;
+employment;3;Self employed;;;;
+foodsource;1;Own farming/crop production and sales;;;;
+foodsource;2;Own livestock production/fattening and sales;;;;
+foodsource;3;Agricultural wage labor (WITHIN THE VILLAGE);;;;
+foodsource;4;Agricultural wage labor (OUTSIDE THE VILLAGE);;;;
+foodsource;5;Non-agricultural wage labor (WITHIN THE VILLAGE);;;;
+foodsource;6;Non-agricultural wage labor (OUTSIDE THE VILLAGE);;;;
+foodsource;7;Salaried work;;;;
+foodsource;8;Sale of wild/bush products (including charcoal, firewood);;;;
+foodsource;9;Honey production and sales;;;;
+foodsource;10;Petty trade (selling other products, e.g., grain, veggies, oil, sugar, etc.);;;;
+foodsource;11;Petty trade (selling own products, e.g., local beer, sex work);;;;
+foodsource;12;Other self-employment/own business (agricultural, e.g., buying/reselling chat);;;;
+foodsource;13;Other self-employment/own business (non-agricultural, e.g., stone cutting,;;;;
+foodsource;14;hair braiding, etc.;;;;
+foodsource;15;Rental of land, house, rooms;;;;
+foodsource;16;Remittances;;;;
+foodsource;17;Gifts/inheritance;;;;
+foodsource;18;Safety net food/cash assistance;;;;
+foodsource;98;Other (specify):;;;;
+yndr;1;Yes;;;;
+yndr;2;No;;;;
+yndr;3;Don’t know;;;;
+support;1;Emergency food assistance;;;;
+support;2;Emergency cash assistance;;;;
+support;3;Conditional cash transfer (CFW);;;;
+support;4;Conditional food transfer (FFW);;;;
+support;5;Unconditional cash transfer (non-emergency);;;;
+support;6;Unconditional food transfer (non-emergency);;;;
+support;7;Housing materials/non-food items;;;;
+support;8;WASH inputs;;;;
+support;9;Educational assistance/school feeding;;;;
+support;10;Ag inputs (seeds, fertilizers, etc.);;;;
+support;11;Livestock inputs (e.g., feed, fodder, medicine, dips);;;;
+support;12;Nutrition/supplemental feeding;;;;
+support;98;Other (specify)  ;;;;
+help;1;Relatives;;;;
+help;2;Non-relatives in my ethnic group/clan;;;;
+help;3;Non-relatives in another ethnic group/clan;;;;
+help;4;No one;;;;
+help;98;Other (specify);;;;
+rate;1;Increased;;;;
+rate;2;Stayed the same;;;;
+rate;3;Decreased;;;;
+know;1;Family member or relative;;;;
+know;2;Friend;;;;
+know;3;Neighbor;;;;
+know;4;Acquaintance (member of a group, friend of a friend, etc.);;;;
+know;98;Other (specify):;;;;
+agree;1;Strongly agree;;;;
+agree;2;Agree;;;;
+agree;3;Disagree;;;;
+agree;4;Strongly disagree ;;;;
+statements;1;Each person is primarily responsible for his/her success or failure in life;;;;
+statements;2; One’s success or failure in life is a matter of his/her destiny;;;;
+statements2;1;To be successful, above all one needs to work very hard;;;;
+statements2;2;To be successful, above all one needs to be lucky;;;;
+aca6;1;No preference;;;0;red
+aca6;2;Any level of primary;;;1;yellow
+aca6;3;Graduated from primary;;;2;orange
+aca6;4;Graduated from secondary;;;3;lightgreen
+aca6;5;Post-secondary (college, university);;;4;green
+yn2;1;Yes;;;;
+yn2;2;No;;;;
+yn2;3;Decision not made;;;;
+input;1;I am solely responsible for the decision;;;5;darkgreen
+input;2;I ask other HH members, but I most always have final say;;;4;green
+input;3;Spouse/partner and I jointly decided;;;3;lightgreen
+input;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+input;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+input;6;I have no say in the decision;;;0;red
+marriage;1;Married;;;2;white
+marriage;2;Single;;;1;blue
+marriage;3;Divorced;;;0;yellow
+marriage;4;Widowed;;;1;grey
+month;1;January;;;;
+month;2;February;;;;
+month;3;March;;;;
+month;4;April;;;;
+month;5;May;;;;
+month;6;June;;;;
+month;7;July;;;;
+month;8;August;;;;
+month;9;September;;;;
+month;10;October;;;;
+month;11;November;;;;
+month;12;December;;;;
+happen_often;1;Rarely (1–2 times);;;;
+happen_often;2;Sometimes (3–10 times);;;;
+happen_often;3;Often (more than 10 times);;;;
+ability;1;Increased;;;2;green
+ability;2;Stayed the same;;;1;yellow
+ability;3;Decreased;;;0;red
+aca1;1;Strongly agree;;;3;green
+aca1;2;Agree;;;2;lightgreen
+aca1;3;Disagree;;;1;orange
+aca1;4;Strongly disagree;;;0;red
+aca2;1;Strongly agree;;;3;green
+aca2;2;Agree;;;2;lightgreen
+aca2;3;Disagree;;;1;orange
+aca2;4;Strongly disagree;;;0;red
+cs1.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs1.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs1.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs1.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs1.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs1.2;6;I have no say in the decision;;;0;red
+cs1.3;1;I am solely responsible for the decision;;;5;darkgreen
+cs1.3;2;I ask other HH members, but I most always have final say;;;4;green
+cs1.3;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs1.3;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs1.3;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs1.3;6;I have no say in the decision;;;0;red
+cs2.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs2.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs2.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs2.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs2.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs2.2;6;I have no say in the decision;;;0;red
+cs2.3;1;I am solely responsible for the decision;;;5;darkgreen
+cs2.3;2;I ask other HH members, but I most always have final say;;;4;green
+cs2.3;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs2.3;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs2.3;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs2.3;6;I have no say in the decision;;;0;red
+cs3.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs3.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs3.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs3.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs3.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs3.2;6;I have no say in the decision;;;0;red
+cs4.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs4.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs4.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs4.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs4.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs4.2;6;I have no say in the decision;;;0;red
+cs5.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs5.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs5.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs5.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs5.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs5.2;6;I have no say in the decision;;;0;red
+cs6.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs6.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs6.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs6.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs6.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs6.2;6;I have no say in the decision;;;0;red
+cs7.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs7.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs7.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs7.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs7.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs7.2;6;I have no say in the decision;;;0;red
+cs8.2;1;I am solely responsible for the decision;;;5;darkgreen
+cs8.2;2;I ask other HH members, but I most always have final say;;;4;green
+cs8.2;3;Spouse/partner and I jointly decided;;;3;lightgreen
+cs8.2;4;Spouse/partner or other male asks for my opinion but I don’t have final say;;;2;yellow
+cs8.2;5;Spouse/partner or other male informs me of decision, but I don’t have final say;;;1;orange
+cs8.2;6;I have no say in the decision;;;0;red
